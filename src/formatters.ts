@@ -50,18 +50,17 @@ export function formatAbuseReportResolved(
   const { body, server, createdAt } = payload;
   const { labels } = config;
   const eventConfig = config.events.abuseReportResolved;
-  const report = body.report;
 
   const fields: DiscordEmbedField[] = [
-    { name: labels.targetUser, value: userLabel(report.targetUser), inline: true },
-    { name: labels.reporter, value: userLabel(report.reporter), inline: true },
-    { name: labels.comment, value: report.comment || '—' },
+    { name: labels.targetUser, value: userLabel(body.targetUser), inline: true },
+    { name: labels.reporter, value: userLabel(body.reporter), inline: true },
+    { name: labels.comment, value: body.comment || '—' },
     { name: labels.resolvedAs, value: body.resolvedAs ?? labels.unknown, inline: true },
     { name: labels.server, value: server, inline: true },
   ];
 
-  if (report.assignee) {
-    fields.push({ name: labels.assignee, value: userLabel(report.assignee), inline: true });
+  if (body.assignee) {
+    fields.push({ name: labels.assignee, value: userLabel(body.assignee), inline: true });
   }
 
   return {

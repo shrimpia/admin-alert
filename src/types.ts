@@ -28,7 +28,14 @@ export interface AbuseReportBody {
 
 export interface AbuseReportResolvedBody {
   reportId: string;
-  report: AbuseReportBody;
+  targetUserId: string;
+  targetUser: UserLite;
+  reporterId: string;
+  reporter: UserLite;
+  assigneeId: string | null;
+  assignee: UserLite | null;
+  comment: string;
+  forwarded: boolean;
   resolvedAs: string | null;
 }
 
