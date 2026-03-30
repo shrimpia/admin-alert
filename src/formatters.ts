@@ -39,7 +39,7 @@ export function formatAbuseReport(
     title: eventConfig.title,
     color: eventConfig.color,
     fields,
-    timestamp: new Date(createdAt * 1000).toISOString(),
+    timestamp: new Date(createdAt).toISOString(),
   };
 }
 
@@ -68,7 +68,7 @@ export function formatAbuseReportResolved(
     title: eventConfig.title,
     color: eventConfig.color,
     fields,
-    timestamp: new Date(createdAt * 1000).toISOString(),
+    timestamp: new Date(createdAt).toISOString(),
   };
 }
 
@@ -87,7 +87,7 @@ export function formatUserCreated(
       { name: labels.targetUser, value: userLabel(body) },
       { name: labels.server, value: server, inline: true },
     ],
-    timestamp: new Date(createdAt * 1000).toISOString(),
+    timestamp: new Date(createdAt).toISOString(),
   };
 }
 
@@ -111,7 +111,7 @@ export function formatInactiveModeratorsWarning(
       { name: labels.remainingTime, value: remainingStr, inline: true },
       { name: labels.server, value: server, inline: true },
     ],
-    timestamp: new Date(createdAt * 1000).toISOString(),
+    timestamp: new Date(createdAt).toISOString(),
   };
 }
 
@@ -130,6 +130,6 @@ export function formatInactiveModeratorsInvitationOnlyChanged(
       { name: '招待制', value: body.invitationOnly ? '有効' : '無効', inline: true },
       { name: labels.server, value: server, inline: true },
     ],
-    timestamp: new Date(createdAt * 1000).toISOString(),
+    timestamp: new Date(createdAt).toISOString(),
   };
 }
