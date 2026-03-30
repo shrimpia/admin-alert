@@ -1,0 +1,22 @@
+{
+  "name": "shrimpia-admin-alert",
+  "version": "1.0.0",
+  "description": "Misskey System Webhook to Discord Webhook bridge for Cloudflare Workers",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.32.1",
+  "dependencies": {
+    "hono": "^4.7.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250327.0",
+    "typescript": "^5.8.2",
+    "wrangler": "^3.112.0"
+  }
+}

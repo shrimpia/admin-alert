@@ -1,0 +1,48 @@
+{
+  "events": {
+    "abuseReport": {
+      "enabled": true,
+      "title": "🚨 新規通報",
+      "color": 15548997,
+      "mentionRoleId": null
+    },
+    "abuseReportResolved": {
+      "enabled": true,
+      "title": "✅ 通報解決",
+      "color": 5763719,
+      "mentionRoleId": null
+    },
+    "userCreated": {
+      "enabled": true,
+      "title": "👤 新規ユーザー登録",
+      "color": 5793266,
+      "mentionRoleId": null
+    },
+    "inactiveModeratorsWarning": {
+      "enabled": true,
+      "title": "⚠️ モデレーター非アクティブ警告",
+      "color": 16776960,
+      "mentionRoleId": null
+    },
+    "inactiveModeratorsInvitationOnlyChanged": {
+      "enabled": true,
+      "title": "🔒 招待制設定変更",
+      "color": 10070709,
+      "mentionRoleId": null
+    }
+  },
+  "labels": {
+    "targetUser": "対象ユーザー",
+    "reporter": "通報者",
+    "comment": "通報内容",
+    "assignee": "担当者",
+    "resolved": "解決済み",
+    "resolvedAs": "解決方法",
+    "forwarded": "転送済み",
+    "remainingTime": "残り時間",
+    "days": "日",
+    "hours": "時間",
+    "server": "サーバー",
+    "unknown": "不明"
+  }
+}
